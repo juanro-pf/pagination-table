@@ -47,10 +47,10 @@ const App = () => {
         </tbody>
       </table>
       <section className="pagination">
-        <button className="first-page-btn" onClick={handleFirst} disabled={loading}>first</button>
-        <button className="previous-page-btn" onClick={handlePrev} disabled={loading}>previous</button>
-        <button className="next-page-btn" onClick={handleNext} disabled={loading}>next</button>
-        <button className="last-page-btn" onClick={handleLast} disabled={loading}>last</button>
+        <button className="first-page-btn" onClick={handleFirst} disabled={loading|page===1}>first</button>
+        <button className="previous-page-btn" onClick={handlePrev} disabled={loading|page===1}>previous</button>
+        <button className="next-page-btn" onClick={handleNext} disabled={loading|page===10}>next</button>
+        <button className="last-page-btn" onClick={handleLast} disabled={loading|page===10}>last</button>
       </section>
     </div>
 
